@@ -1,0 +1,27 @@
+ou can put a try catch inside the catch block, or you can simply throw the exception again. Its better to have finally block with your try catch so that even if an exception occurs in the catch block, finally block code gets executed. Finally block may not get executed in certain exceptions
+
+try
+{
+}
+catch (Exception ex)
+{
+    try
+    {
+        // code that is supposed to throw an exception
+    }
+    catch (Exception ex1)
+    {
+    }
+    // code that is not supposed to throw an exception       
+}
+finally
+{
+    try
+    {
+        // code that is supposed to throw an exception
+    }
+    catch (Exception ex1)
+    {
+    }
+    // code that is not supposed to throw an exception       
+}
